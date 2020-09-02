@@ -15,7 +15,7 @@ function App() {
     .then(res => res.json())
     .then(
       (result) => {
-        console.log(result.data)
+      setData(result)
       },
       (error) => {
         console.log(error);
@@ -25,9 +25,15 @@ function App() {
 
   const selectHandler = (e) => {
       e.preventDefault()
-      // cardDivRef.current.setAttribute("id", "card-selected-div");
+      cardDivRef.current.setAttribute("id", "card-selected-div");
       // setCardActive(true);
-      // forceUpdate()
+      forceUpdate()
+  }
+  const compressHandler = (e) => {
+      e.preventDefault()
+      cardDivRef.current.setAttribute("id", "card-div");
+      // setCardActive(true);
+      forceUpdate()
   }
 
   return (
@@ -35,8 +41,7 @@ function App() {
         <div className="card-div" id="card-div" ref={cardDivRef}>
           {
             data.map((datum, index) => (
-              
-                <Card cardIndex={index} cardTitle={cardTitle} cardContent={datum} selectHandler={selectHandler} cardActive={cardActive} selected={true}/>
+                <Card cardIndex={index} cardTitle={cardTitle} cardContent={datum} selectHandler={selectHandler} compressHandler={compressHandler} cardActive={cardActive} selected={true}/>
             )) 
           }
         </div>
