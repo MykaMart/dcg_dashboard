@@ -3,13 +3,26 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  #card-div {
-    display: flex;
-    align-self: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+  .card-div {
+    display: grid;
+    grid-template-rows: 2;
+    grid-template-columns: 3;
     background-color: rgb(244, 246, 248);
     width: 1035px;
     height: 440px;
   }
+  #card-div {
+
+    // align-self: center;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+
+  }
+  // #card-selected-div {
+  //   display: flex;
+  //   align-self: center;
+  //   flex-direction: column;
+  //   flex-wrap: wrap;
+  // }
+  
 }
