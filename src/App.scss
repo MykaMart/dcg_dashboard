@@ -1,0 +1,15 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  #card-div {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(244, 246, 248);
+    width: 1035px;
+    height: 440px;
+  }
+}
