@@ -9,26 +9,25 @@ const Card = props => {
 	const forceUpdate 					= React.useState()[1].bind(null, {})
 	const cardTitle 					= props.cardTitle;
 	const cardContent 					= props.cardContent;
-	const cardindex     				= props.cardindex;
+	const cardIndex     				= props.cardIndex;
 	const selectHandler 				= props.selectHandler;
 	const compressHandler 				= props.compressHandler;
 
 	const cardSelectHandler = (e) => {
 		e.preventDefault()
+		selectHandler(e, cardIndex + 1);
 		cardRef.current.setAttribute("id", "active");	
-		selectHandler(e);
-		
 	}
 
 	const cardCompressHandler = (e) => {
 		e.preventDefault()
-		cardRef.current.removeAttribute("id");
 		compressHandler(e);
+		cardRef.current.removeAttribute("id");
 		
 	}
 
 	return(
-		<div key={cardindex} ref={cardRef} className="Card" >
+		<div key={cardIndex} data-key={cardIndex} ref={cardRef} className="Card" >
 			<img src={compress} className="compress" onClick={(e) => {cardCompressHandler(e)}}></img>
 			<div className="inner-card" onClick={(e) => cardSelectHandler(e)}>
 				<p className="card-title">{ cardTitle }</p>

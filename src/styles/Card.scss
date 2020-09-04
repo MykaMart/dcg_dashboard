@@ -37,10 +37,21 @@
     height: 366px;
     width: 583px;
     transition: all .2s ease;
+    margin: 20px 35px 35px 35px;
     .compress {
     	display: inline;
 		position: relative;
 		float: right;
 		width: 4%;
+	}
+	.inner-card {
+		.card-title{
+			margin-left: 2%
+		}
+		.card-content {
+			font-size: 58px;
+			margin-top: 8%;
+			margin-left: 2%;
+		}
 	}
 }

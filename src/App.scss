@@ -4,9 +4,6 @@
   align-items: center;
   height: 100vh;
   .card-div {
-    // display: grid;
-    // grid-template-rows: 2;
-    // grid-template-columns: 3;
     background-color: rgb(244, 246, 248);
     width: 1035px;
     height: 440px;
@@ -16,10 +13,12 @@
     align-self: center;
     flex-direction: row;
     flex-wrap: wrap;
-    // align-self: center;
-    // flex-direction: row;
-    // flex-wrap: wrap;
-
+    #collapsed {
+      display: flex;
+      align-self: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
   #card-selected-div {
     display: flex;
@@ -27,5 +26,35 @@
     flex-direction: column;
     flex-wrap: wrap;
   }
-  
+  #inactiveCardsDiv > * {
+    width: 275px;
+    height: 31px;
+    pointer-events: none;
+    margin: 20px;
+    .inner-card{
+      display: flex;
+      flex-direction: row;
+      padding-left: 4px;
+      padding-top: 5px;
+      .card-title{
+        width: 85%;
+        margin:0 0 6px 0;
+      }
+      .card-content {
+        font-size: 16px;
+      }
+    }
+  }
+
+  // #active {
+  //   height: 366px;
+  //   width: 583px;
+  //   transition: all .2s ease;
+  //   .compress {
+  //     display: inline;
+  //     position: relative;
+  //     float: right;
+  //     width: 4%;
+  //   }
+  // }
 }
