@@ -26,35 +26,24 @@
     flex-direction: column;
     flex-wrap: wrap;
   }
-  #inactiveCardsDiv > * {
-    width: 275px;
-    height: 31px;
-    pointer-events: none;
-    margin: 20px;
-    .inner-card{
-      display: flex;
-      flex-direction: row;
-      padding-left: 4px;
-      padding-top: 5px;
-      .card-title{
-        width: 85%;
-        margin:0 0 6px 0;
-      }
-      .card-content {
-        font-size: 16px;
-      }
-    }
-  }
-
-  // #active {
-  //   height: 366px;
-  //   width: 583px;
+  // #inactiveCardsDiv > * {
+  //   width: 275px;
+  //   height: 31px;
+  //   pointer-events: none;
+  //   margin: 20px;
   //   transition: all .2s ease;
-  //   .compress {
-  //     display: inline;
-  //     position: relative;
-  //     float: right;
-  //     width: 4%;
+  //   .inner-card{
+  //     display: flex;
+  //     flex-direction: row;
+  //     padding-left: 4px;
+  //     padding-top: 5px;
+  //     .card-title{
+  //       width: 85%;
+  //       margin:0 0 6px 0;
+  //     }
+  //     .card-content {
+  //       font-size: 16px;
+  //     }
   //   }
   // }
 }

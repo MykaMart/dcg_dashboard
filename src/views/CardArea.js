@@ -1,28 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Card                                   from './components/Card';
-import                                             './App.scss';
+import Card                                   from '../components/Card';
+import                                             '../App.scss';
 
-function App() {
+function CardArea(props) {
 
-  const [ data, setData ]             = useState([]);
+  const [ data, setData ]             = useState(props.data);
   const cardDivRef                    = useRef(null);
   const collapsedRef                  = useRef(null);
   const activeCardRef                 = useRef(null);
   const inactiveCardsRef              = useRef(null);
   const cardTitle                     = "Percent Accuracy";
 
-  useEffect(() => {
-    fetch("http://172.104.28.104:9999")
-    .then(res => res.json())
-    .then(
-      (result) => {
-      setData(result)
-      },
-      (error) => {
-        console.log(error);
-      }
-    )
-  }, [])
 
   const selectHandler = (e, selectedCard) => {
       e.preventDefault()
@@ -80,11 +68,10 @@ function App() {
   }
 
   return (
-    <div className="App">
-    {
-      <div className="card-div" id="card-div" ref={cardDivRef}>
+    <div className="CardArea">
+        <div className="card-div" id="card-div" ref={cardDivRef}>
           <div id="collapsed" ref={collapsedRef}>
-             {
+            {
               data.map((datum, index) => (
                   <Card cardIndex={index} cardTitle={cardTitle} cardContent={datum} selectHandler={selectHandler} compressHandler={compressHandler} />
               )) 
@@ -93,10 +80,8 @@ function App() {
           <div id="activeCardDiv" ref={activeCardRef}></div>
           <div id="inactiveCardsDiv" ref={inactiveCardsRef}></div>
         </div>
-    }
-        
     </div>
   );
 }
 
-export default App;
+export default CardArea;

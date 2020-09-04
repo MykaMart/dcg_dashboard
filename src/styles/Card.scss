@@ -23,7 +23,6 @@
 			margin: 0;
 		}
 	}
-	
 	.compress {
 		display: none;
 	}
@@ -36,7 +35,7 @@
 #active {
     height: 366px;
     width: 583px;
-    transition: all .2s ease;
+    transition: all .8s ease;
     margin: 20px 35px 35px 35px;
     .compress {
     	display: inline;
@@ -54,4 +53,25 @@
 			margin-left: 2%;
 		}
 	}
+}
+
+.inactive {
+	width: 275px;
+    height: 31px;
+    pointer-events: none;
+    margin: 20px;
+    transition: all .2s ease;
+    .inner-card{
+      display: flex;
+      flex-direction: row;
+      padding-left: 4px;
+      padding-top: 5px;
+      .card-title{
+        width: 85%;
+        margin:0 0 6px 0;
+      }
+      .card-content {
+        font-size: 16px;
+      }
+    }
 }
